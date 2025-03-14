@@ -1,5 +1,7 @@
 
 
+
+
 import streamlit as st
 
 def convert_length(value, from_unit, to_unit):
@@ -59,7 +61,6 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS for additional styling
 st.markdown("""
     <style>
     h1 {
@@ -108,7 +109,6 @@ with col2:
 with col3:
     to_unit = st.selectbox("To unit", units)
 
-# Perform conversion
 if conversion_type == "Length":
     result = convert_length(value, from_unit, to_unit)
 elif conversion_type == "Weight":
@@ -116,7 +116,6 @@ elif conversion_type == "Weight":
 elif conversion_type == "Temperature":
     result = convert_temperature(value, from_unit, to_unit)
 
-# Display the result with a colorful box
 st.markdown(f"""
     <div style="background-color: #4a90e2; padding: 20px; border-radius: 10px; text-align: center;">
         <h2 style="color: white;">Converted Value</h2>
